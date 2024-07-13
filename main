@@ -1,0 +1,21 @@
+
+list = ["Mercedes","Tesla","Audi","Dodge"]
+while True:
+    print(list)
+    input1 = input("Do you want to make any changes to the list? yes/no ")
+    if input1 == "yes":
+        input2 = input("Want to add or delete something from the list? add/delete ")
+        if input2 == "add":
+            add = input("write what you want to add ")
+            list.append(add)
+        elif input2 == "delete":
+            delete = input("Please write the element you want to delete. ")
+            check = delete in list
+            if check == False:
+                print("sorry there is no such thing")
+            elif check == True:
+                list.remove(str(delete))
+
+    elif input1 == "no":
+        print("the program has been terminated")
+        break
